@@ -1,0 +1,22 @@
+doctype html
+html(ng-app)
+  head
+    meta(charset='utf-8')
+    meta('http-equiv'='X-UA-Compatible', content='IE=edge')
+    title #{title}
+    if description
+      meta(name='description', content='#{description}')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(property='og:type', content='article')
+    if title
+      meta(property='og:title', content='#{title}')
+    if description
+      meta(property='og:description', content='#{description}')
+    block styles
+      link(rel='stylesheet', href='assets/app.css')
+    block headEnd
+  body
+    block body
+    block scripts
+      script(src='assets/app.js')
+    block bodyEnd
