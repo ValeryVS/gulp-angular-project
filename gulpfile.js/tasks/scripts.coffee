@@ -12,7 +12,6 @@ env          = require('../env')  if fs.existsSync('gulpfile.js/env.coffee')
 gulp.task 'scripts', ->
   browserify(config, debug: env is 'development')
     .transform('coffeeify')
-    .transform('uglifyify')
     .bundle()
     .on('error', handleErrors)
     .pipe(source(config.outputName))
