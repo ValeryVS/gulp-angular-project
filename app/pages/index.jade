@@ -4,9 +4,11 @@ block headEnd
   // add some other styles or meta
 
 block body
-  include ../blocks/hello/hello.jade
-  include ../blocks/contacts/contacts.html
-  include ../blocks/todo/todo.jade
+  div(ng-app="myApp")
+    include ../blocks/hello/hello.jade
+    include ../blocks/contacts/contacts.html
+    include ../blocks/todo/todo.jade
+    a(href="server.html") server page
 
 block scripts
   // reset default scripts block on this page
