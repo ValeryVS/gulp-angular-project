@@ -38,6 +38,6 @@ module.exports = ->
     return
 
   angular.module('todo', [])
-    .controller('TodoCtrl', TodoCtrl);
+    .controller('TodoCtrl', TodoCtrl)
 
   return
